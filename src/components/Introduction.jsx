@@ -1,5 +1,6 @@
 import { IoCodeSlashSharp } from 'react-icons/io5';
 import { motion } from 'motion/react';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function IntroductionComponent() {
     return (
@@ -39,9 +40,17 @@ export default function IntroductionComponent() {
                 }}
                 transition={{ duration: 1 }}
             >
-                <button className='bg-violet-500 lg:text-xl font-bold p-5 rounded-lg text-white'>
-                    PROJECTS
-                </button>
+                <div className='flex gap-10'>
+                    <a href=''>
+                        <FaGithub className='text-black w-10 h-10 lg:w-16 lg:h-16 hover:text-black/70' />
+                    </a>
+                    <a href=''>
+                        <FaInstagram className='text-black w-10 h-10 lg:w-16 lg:h-16 hover:text-black/70' />
+                    </a>
+                    <a href=''>
+                        <FaLinkedin className='text-black w-10 h-10 lg:w-16 lg:h-16 hover:text-black/70' />
+                    </a>
+                </div>
             </motion.div>
             <div className='absolute bottom-2'>
                 <IoCodeSlashSharp className='w-10 h-10' />

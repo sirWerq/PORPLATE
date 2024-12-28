@@ -1,14 +1,24 @@
-import reactImage from '../assets/react.svg';
+import { RiNextjsFill } from 'react-icons/ri';
+import { TbBrandVite } from 'react-icons/tb';
+import { FaBootstrap } from 'react-icons/fa';
+import { RiTailwindCssFill } from 'react-icons/ri';
+import { FaHtml5 } from 'react-icons/fa';
+import { FaCss3 } from 'react-icons/fa';
+import { IoLogoJavascript } from 'react-icons/io5';
+import { SiTypescript } from 'react-icons/si';
+import { FaNodeJs } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FaGitAlt } from 'react-icons/fa';
 import { motion } from 'motion/react';
 
 export default function AboutComponent() {
     return (
         <div className='w-full h-full p-4 lg:p-0 lg:h-screen flex flex-col gap-10 justify-center items-center'>
             <motion.div
-                initial={{ opacity: 0, translateX: -100 }}
+                initial={{ opacity: 0, translateY: 100 }}
                 whileInView={{
                     opacity: 1,
-                    translateX: 0,
+                    translateY: 0,
                 }}
                 transition={{ duration: 0.5 }}
                 className='inline-block relative mt-14 lg:mt-0'
@@ -19,10 +29,10 @@ export default function AboutComponent() {
                 <div className='absolute -bottom-5 left-[50%] -translate-x-[50%] w-[20%] h-[5px] bg-violet-500'></div>
             </motion.div>
             <motion.div
-                initial={{ opacity: 0, translateX: -100 }}
+                initial={{ opacity: 0, translateY: 100 }}
                 whileInView={{
                     opacity: 1,
-                    translateX: 0,
+                    translateY: 0,
                 }}
                 transition={{ duration: 0.5 }}
             >
@@ -90,136 +100,92 @@ export default function AboutComponent() {
                             </span>
                             <div className='flex-grow h-[1px] bg-gray-300 ml-4'></div>
                         </div>
-                        <ul className='space-y-2'>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                        <div className='space-y-2'>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-1'>
+                                    <RiNextjsFill className='w-full h-full' />
                                 </div>
                                 <p className='text-sm'>Next Js</p>
-                            </li>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                            </div>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-1'>
+                                    <TbBrandVite className='w-full h-full text-fuchsia-500' />
                                 </div>
                                 <p>Vite</p>
-                            </li>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                            </div>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-1'>
+                                    <FaBootstrap className='w-full h-full text-[rgb(148,105,198)]' />
                                 </div>
                                 <p>Bootstrap</p>
-                            </li>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                            </div>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-1'>
+                                    <RiTailwindCssFill className='w-full h-full text-[rgb(56,189,248)]' />
                                 </div>
                                 <p>Tailwind</p>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                         <div className='flex items-center w-full'>
                             <span className='text-center font-bold text-lg whitespace-nowrap relative'>
                                 Languages
                             </span>
                             <div className='flex-grow h-[1px] bg-gray-300 ml-4'></div>
                         </div>
-                        <ul className='space-y-2'>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                        <div className='space-y-2'>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-1'>
+                                    <FaHtml5 className='w-full h-full text-[rgb(221,75,37)]' />
                                 </div>
                                 <p>{'HTML (Markup Language)'}</p>
-                            </li>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                            </div>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-1'>
+                                    <FaCss3 className='w-full h-full text-blue-500' />
                                 </div>
                                 <p>{'CSS (Cascading Styling)'}</p>
-                            </li>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                            </div>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-2'>
+                                    <IoLogoJavascript className='w-full h-full text-yellow-500' />
                                 </div>
                                 <p>JavaScript</p>
-                            </li>
-                            <li>
-                                <li className='flex gap-4 items-center'>
-                                    <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                        <img
-                                            src={reactImage}
-                                            alt=''
-                                            className='w-full h-full'
-                                        />
+                            </div>
+                            <div>
+                                <div className='flex gap-4 items-center'>
+                                    <div className='w-9 h-9 rounded-full p-2'>
+                                        <SiTypescript className='w-full h-full text-blue-600' />
                                     </div>
                                     <p>TypeScript</p>
-                                </li>
-                            </li>
-                        </ul>
+                                </div>
+                            </div>
+                        </div>
                         <div className='flex items-center w-full'>
                             <span className='text-center font-bold text-lg whitespace-nowrap relative'>
                                 Ecosystems
                             </span>
                             <div className='flex-grow h-[1px] bg-gray-300 ml-4'></div>
                         </div>
-                        <ul className='space-y-2'>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                        <div className='space-y-2'>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-1'>
+                                    <FaNodeJs className='w-full h-full text-green-600' />
                                 </div>
                                 <p>Node Js</p>
-                            </li>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                            </div>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-1'>
+                                    <FaGithub className='w-full h-full' />
                                 </div>
                                 <p>Github</p>
-                            </li>
-                            <li className='flex gap-4 items-center'>
-                                <div className='w-9 h-9 rounded-full bg-neutral-400 p-1'>
-                                    <img
-                                        src={reactImage}
-                                        alt=''
-                                        className='w-full h-full'
-                                    />
+                            </div>
+                            <div className='flex gap-4 items-center'>
+                                <div className='w-9 h-9 rounded-full p-1'>
+                                    <FaGitAlt className='w-full h-full text-orange-500' />
                                 </div>
                                 <p>Git</p>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
             </div>
