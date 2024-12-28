@@ -31,7 +31,7 @@ export default function NavbarComponent() {
                     <ul className='flex lg:gap-5 flex-col lg:flex-row'>
                         <li>
                             <a
-                                href=''
+                                href='/'
                                 className='p-4 font-bold w-full block border-b lg:border-none'
                             >
                                 HOME
@@ -39,7 +39,7 @@ export default function NavbarComponent() {
                         </li>
                         <li>
                             <a
-                                href=''
+                                href='/projects'
                                 className='p-4 font-bold w-full block border-b lg:border-none'
                             >
                                 PROJECTS

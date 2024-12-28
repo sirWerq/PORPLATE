@@ -42,12 +42,12 @@ export default function AboutComponent() {
                     technology
                 </p>
             </motion.div>
-            <div className='flex w-full flex-col lg:flex-row px-4 lg:px-11 space-x-3 space-y-4 lg:space-y-0'>
+            <div className='flex w-full flex-col lg:flex-row px-4 lg:px-11 space-x-3 space-y-4 lg:space-y-0 overflow-hidden'>
                 <motion.div
-                    initial={{ opacity: 0, translateY: 100 }}
+                    initial={{ opacity: 0, translateX: -100 }}
                     whileInView={{
                         opacity: 1,
-                        translateY: 0,
+                        translateX: 0,
                     }}
                     transition={{ duration: 0.5 }}
                     className='lg:flex-1 flex flex-col items-center space-y-9'
@@ -84,10 +84,10 @@ export default function AboutComponent() {
                     </ol>
                 </motion.div>
                 <motion.div
-                    initial={{ opacity: 0, translateY: 100 }}
+                    initial={{ opacity: 0, translateX: 100 }}
                     whileInView={{
                         opacity: 1,
-                        translateY: 0,
+                        translateX: 0,
                     }}
                     transition={{ duration: 0.5 }}
                     className='lg:flex-1 flex flex-col text-center space-y-9'

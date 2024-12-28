@@ -32,7 +32,7 @@ export default function ProjectComponent() {
                     study
                 </p>
             </motion.div>
-            <div className='w-[75%] mt-9 space-y-8'>
+            <div className='w-[75%] mt-9 space-y-8 overflow-hidden'>
                 <Card />
                 <Card />
                 <div className='text-center p-4'>
