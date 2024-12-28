@@ -24,8 +24,8 @@ export default function NavbarComponent() {
             </div>
             <nav
                 className={`${
-                    hamburgerMenu ? 'hidden lg:block' : 'block'
-                } absolute top-full right-0 lg:relative w-full lg:w-auto text-end lg:text-inherit bg-white`}
+                    hamburgerMenu ? 'block' : 'hidden'
+                } absolute top-full right-0 lg:relative w-full lg:w-auto text-end lg:text-inherit bg-white lg:block`}
             >
                 <ul className='flex lg:gap-5 flex-col lg:flex-row'>
                     <li>
@@ -41,7 +41,7 @@ export default function NavbarComponent() {
                             href=''
                             className='p-4 font-bold w-full block border-b lg:border-none'
                         >
-                            ABOUT
+                            OVERVIEW
                         </a>
                     </li>
                     <li>
