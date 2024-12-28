@@ -1,11 +1,14 @@
 import NavbarComponent from './Navbar';
+import { Outlet } from 'react-router-dom';
+import useStore from '../store/store';
 
-// eslint-disable-next-line react/prop-types
-export default function Layout({ children }) {
+export default function Layout() {
+    const { darkMode } = useStore();
+
     return (
-        <>
+        <div className={`${darkMode ? 'dark' : ''}`}>
             <NavbarComponent />
-            <main>{children}</main>
-        </>
+            <Outlet />
+        </div>
     );
 }

@@ -1,7 +1,7 @@
-import porto_1 from '../assets/project-1.png';
 import { motion } from 'motion/react';
 
-export default function Card() {
+// eslint-disable-next-line react/prop-types
+export default function Card({ image, title, description, link }) {
     return (
         <div className='flex flex-col lg:flex-row items-center gap-10'>
             <motion.div
@@ -11,9 +11,9 @@ export default function Card() {
                     translateX: 0,
                 }}
                 transition={{ duration: 0.5 }}
-                className='flex-1'
+                className='flex-1 rounded-sm overflow-hidden'
             >
-                <img src={porto_1} alt='' className='w-full h-full' />
+                <img src={image} alt={title} className='w-full h-full' />
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, translateX: 100 }}
@@ -24,16 +24,13 @@ export default function Card() {
                 transition={{ duration: 0.5 }}
                 className='flex-1 space-y-6'
             >
-                <h5 className='font-bold text-2xl'>Dopefolio</h5>
-                <p>
-                    Dopefolio is a successful Open-Source project that I created
-                    which have been featured on some of the biggest tech sites
-                    like CSS-Tricks, Hostinger, etc & used by thousands of
-                    developers globally
-                </p>
-                <button className='bg-violet-500 lg:text-xl font-bold p-3 rounded-lg text-white'>
-                    Case Study
-                </button>
+                <h5 className='font-bold text-2xl'>{title}</h5>
+                <p>{description}</p>
+                <div className='bg-violet-500 w-40 text-center hover:bg-violet-500/80 lg:text-xl font-bold p-3 rounded-lg text-white'>
+                    <a href={link} target='_blank' className='w-full h-full'>
+                        SEE WEBSITE
+                    </a>
+                </div>
             </motion.div>
         </div>
     );

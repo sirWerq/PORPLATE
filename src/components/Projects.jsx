@@ -1,9 +1,11 @@
 import { motion } from 'motion/react';
 import Card from './Card';
+import animeListProject from '../assets/animelist.png';
+import ccidWebProject from '../assets/ccidweb.png';
 
 export default function ProjectComponent() {
     return (
-        <div className='w-full h-full px-2 py-10 lg:p-7 flex flex-col gap-10 items-center bg-white'>
+        <div className='w-full h-full px-2 py-10 lg:p-7 flex flex-col gap-10 items-center bg-white dark:bg-black dark:text-white'>
             <motion.div
                 initial={{ opacity: 0, translateX: -100 }}
                 whileInView={{
@@ -33,10 +35,27 @@ export default function ProjectComponent() {
                 </p>
             </motion.div>
             <div className='w-[75%] mt-9 space-y-8 overflow-hidden'>
-                <Card />
-                <Card />
+                <Card
+                    image={animeListProject}
+                    title={'AnimeList Web'}
+                    description={
+                        'A web app that provides information about animes. you can search animes here or you can browse all the animes. only for anime list. [you can see this website by clicking the button and in the future more feature will updated]'
+                    }
+                    link={'/'}
+                />
+                <Card
+                    image={ccidWebProject}
+                    title={'CCID Circle Web'}
+                    description={
+                        'I contributed to my friend&apos;s website by resolving UI bugs, including issues with dark mode, background inconsistencies, and more. My role focused on enhancing the site&apos;s visual stability and user experience.'
+                    }
+                    link={'/'}
+                />
                 <div className='text-center p-4'>
-                    <a href='' className='text-blue-800'>
+                    <a
+                        href='/projects'
+                        className='text-violet-500 hover:text-violet-500/80'
+                    >
                         See More!
                     </a>
                 </div>
