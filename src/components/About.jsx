@@ -14,7 +14,7 @@ import { FaReact } from 'react-icons/fa';
 
 export default function AboutComponent() {
     return (
-        <div className='w-full h-full px-2 py-10 lg:p-7 flex flex-col gap-10 items-center dark:bg-[#121212]'>
+        <>
             <motion.div
                 initial={{ opacity: 0, translateY: 100 }}
                 whileInView={{
@@ -22,7 +22,7 @@ export default function AboutComponent() {
                     translateY: 0,
                 }}
                 transition={{ duration: 0.5 }}
-                className='inline-block relative mt-10 lg:mt-0'
+                className='inline-block relative'
             >
                 <h2 className='font-bold text-2xl lg:text-3xl tracking-wider dark:text-white'>
                     OVERVIEW
@@ -208,6 +208,6 @@ export default function AboutComponent() {
                     </div>
                 </motion.div>
             </div>
-        </div>
+        </>
     );
 }

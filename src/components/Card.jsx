@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { NavLink } from 'react-router';
 
 // eslint-disable-next-line react/prop-types
 export default function Card({ image, title, description, link }) {
@@ -27,13 +28,12 @@ export default function Card({ image, title, description, link }) {
                 <h5 className='font-bold text-2xl'>{title}</h5>
                 <p>{description}</p>
                 <div className='bg-violet-500 w-40 h-12 hover:bg-violet-500/80 lg:text-xl font-bold rounded-lg text-white'>
-                    <a
-                        href={link}
-                        target='_blank'
+                    <NavLink
+                        to={link}
                         className='w-full h-full flex items-center justify-center'
                     >
                         SEE DETAILS
-                    </a>
+                    </NavLink>
                 </div>
             </motion.div>
         </div>

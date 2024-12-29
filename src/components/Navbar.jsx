@@ -15,7 +15,7 @@ export default function NavbarComponent() {
     };
 
     return (
-        <header className='w-full flex justify-between items-center fixed py-[1rem] px-2 lg:px-[5rem] z-10 bg-white border-b border-slate-300 dark:border-slate-800 dark:bg-black'>
+        <header className='w-full flex justify-between items-center fixed top-0 py-[1rem] px-2 lg:px-[5rem] z-10 bg-white border-b border-slate-300 dark:border-slate-800 dark:bg-black'>
             <div className='flex items-center space-x-5'>
                 <img
                     src={profileImage}

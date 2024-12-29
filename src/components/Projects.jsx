@@ -5,7 +5,7 @@ import ccidWebProject from '../assets/ccidweb.png';
 
 export default function ProjectComponent() {
     return (
-        <div className='w-full h-full px-2 py-10 lg:p-7 flex flex-col gap-10 items-center bg-white dark:bg-black dark:text-white'>
+        <>
             <motion.div
                 initial={{ opacity: 0, translateX: -100 }}
                 whileInView={{
@@ -13,7 +13,7 @@ export default function ProjectComponent() {
                     translateX: 0,
                 }}
                 transition={{ duration: 0.5 }}
-                className='inline-block relative mt-10 lg:mt-0'
+                className='inline-block relative'
             >
                 <h2 className='font-bold text-2xl lg:text-3xl tracking-wider'>
                     PROJECTS
@@ -39,13 +39,13 @@ export default function ProjectComponent() {
                     image={animeListProject}
                     title={'AnimeList Web'}
                     description={`A web app that provides information about animes. you can search animes here or you can browse all the animes. only for anime list. [you can see this website by clicking the button and in the future more feature will updated]`}
-                    link={'/'}
+                    link={'/projects/1'}
                 />
                 <Card
                     image={ccidWebProject}
                     title={'CCID Circle Web'}
                     description={`I contributed to my friend's website by resolving UI bugs, including issues with dark mode, background inconsistencies, and more. My role focused on enhancing the sites visual stability and user experience.`}
-                    link={'/'}
+                    link={'/projects/2'}
                 />
                 <div className='text-center p-4'>
                     <a
@@ -56,6 +56,6 @@ export default function ProjectComponent() {
                     </a>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

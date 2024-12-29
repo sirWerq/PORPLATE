@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function ContactComponent() {
     return (
-        <div className='w-full h-full px-2 py-10 lg:p-7 flex flex-col gap-10 items-center bg-hero dark:bg-heroDark bg-cover bg-fixed dark:text-white overflow-hidden'>
+        <>
             <motion.div
                 initial={{ opacity: 0, translateX: -100 }}
                 whileInView={{
@@ -36,7 +36,7 @@ export default function ContactComponent() {
                     opacity: 1,
                 }}
                 transition={{ duration: 0.5 }}
-                className='w-full lg:w-[50%] bg-white dark:bg-[#121212]'
+                className='w-full lg:w-[50%] bg-white dark:bg-[#121212] shadow-sm'
             >
                 <form action='' className='p-10 space-y-5'>
                     <div className='flex flex-col w-full space-y-1'>
@@ -78,6 +78,6 @@ export default function ContactComponent() {
                     </div>
                 </form>
             </motion.div>
-        </div>
+        </>
     );
 }

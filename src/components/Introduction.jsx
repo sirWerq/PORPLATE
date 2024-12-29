@@ -4,7 +4,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function IntroductionComponent() {
     return (
-        <div className='w-full h-screen flex flex-col gap-10 justify-center items-center bg-hero dark:bg-heroDark bg-cover bg-fixed relative'>
+        <>
             <motion.div
                 initial={{ opacity: 0, translateX: -100 }}
                 whileInView={{
@@ -61,6 +61,6 @@ export default function IntroductionComponent() {
             <div className='absolute bottom-2'>
                 <IoCodeSlashSharp className='w-10 h-10 dark:text-white' />
             </div>
-        </div>
+        </>
     );
 }

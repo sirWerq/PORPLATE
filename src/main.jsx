@@ -5,6 +5,7 @@ import App from './App.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router';
 import ProjectPage from './pages/ProjectsPage.jsx';
 import Layout from './components/Layout.jsx';
+import DetailsProjectPage from './pages/detailsProjectPage.jsx';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -13,6 +14,10 @@ createRoot(document.getElementById('root')).render(
                 <Route path='/' element={<Layout />}>
                     <Route index element={<App />} />
                     <Route path='projects' element={<ProjectPage />} />
+                    <Route
+                        path='projects/:id'
+                        element={<DetailsProjectPage />}
+                    />
                 </Route>
             </Routes>
         </BrowserRouter>
