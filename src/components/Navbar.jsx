@@ -29,7 +29,7 @@ export default function NavbarComponent() {
             <div className='flex items-center justify-center gap-5'>
                 <nav
                     className={`${
-                        hamburgerMenu ? 'block' : 'hidden'
+                        hamburgerMenu ? 'block animate-fade-in' : 'hidden'
                     } absolute top-full right-0 lg:relative w-full lg:w-auto text-end lg:text-inherit bg-white dark:bg-black lg:block`}
                 >
                     <ul className='flex lg:gap-5 flex-col lg:flex-row'>
@@ -63,6 +63,7 @@ export default function NavbarComponent() {
                         </li>
                     </ul>
                 </nav>
+
                 <div
                     className='w-[27px] h-[27px] lg:hidden cursor-pointer'
                     onClick={handleHamburger}

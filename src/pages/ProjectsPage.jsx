@@ -13,7 +13,7 @@ export default function ProjectPage() {
                     translateX: 0,
                 }}
                 transition={{ duration: 0.5 }}
-                className='inline-block relative mt-10 lg:mt-[139px]'
+                className='inline-block relative mt-14 lg:mt-[139px]'
             >
                 <h2 className='font-bold text-2xl lg:text-3xl tracking-wider'>
                     PROJECTS LIST

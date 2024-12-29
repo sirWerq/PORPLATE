@@ -45,7 +45,9 @@ export default function ContactComponent() {
                         </label>
                         <input
                             type='text'
-                            className='w-full h-12 rounded-lg bg-zinc-100 dark:bg-white ring-1 ring-violet-500'
+                            className='w-full h-12 rounded-lg bg-zinc-100 dark:bg-white ring-1 ring-violet-500 p-3'
+                            required
+                            autoComplete='off'
                         />
                     </div>
                     <div className='flex flex-col w-full space-y-1'>
@@ -54,14 +56,20 @@ export default function ContactComponent() {
                         </label>
                         <input
                             type='text'
-                            className='w-full h-12 rounded-lg bg-zinc-100 dark:bg-white ring-1 ring-violet-500'
+                            className='w-full h-12 rounded-lg bg-zinc-100 dark:bg-white ring-1 ring-violet-500 p-3'
+                            required
+                            autoComplete='off'
                         />
                     </div>
                     <div className='flex flex-col w-full space-y-1'>
                         <label htmlFor='' className='ml-2 font-semibold'>
                             Message
                         </label>
-                        <textarea className='w-full h-64 rounded-lg bg-zinc-100 dark:bg-white ring-1 ring-violet-500' />
+                        <textarea
+                            className='w-full h-64 rounded-lg bg-zinc-100 dark:bg-white ring-1 ring-violet-500 p-3'
+                            required
+                            autoComplete='off'
+                        />
                     </div>
                     <div className='flex flex-col items-center w-full space-y-1'>
                         <button className='bg-violet-500 p-4 font-semibold text-white rounded-lg'>
