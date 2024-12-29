@@ -38,17 +38,13 @@ export default function ProjectComponent() {
                 <Card
                     image={animeListProject}
                     title={'AnimeList Web'}
-                    description={
-                        'A web app that provides information about animes. you can search animes here or you can browse all the animes. only for anime list. [you can see this website by clicking the button and in the future more feature will updated]'
-                    }
+                    description={`A web app that provides information about animes. you can search animes here or you can browse all the animes. only for anime list. [you can see this website by clicking the button and in the future more feature will updated]`}
                     link={'/'}
                 />
                 <Card
                     image={ccidWebProject}
                     title={'CCID Circle Web'}
-                    description={
-                        'I contributed to my friend&apos;s website by resolving UI bugs, including issues with dark mode, background inconsistencies, and more. My role focused on enhancing the site&apos;s visual stability and user experience.'
-                    }
+                    description={`I contributed to my friend's website by resolving UI bugs, including issues with dark mode, background inconsistencies, and more. My role focused on enhancing the sites visual stability and user experience.`}
                     link={'/'}
                 />
                 <div className='text-center p-4'>
