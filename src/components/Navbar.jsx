@@ -20,9 +20,9 @@ export default function NavbarComponent() {
                 <img
                     src={profileImage}
                     alt=''
-                    className='w-12 h-12 rounded-full'
+                    className='md:w-12 md:h-12 h-8 w-8 rounded-full'
                 />
-                <p className='font-bold text-xl tracking-wider dark:text-white'>
+                <p className='font-bold text-lg md:text-xl tracking-wider dark:text-white'>
                     Rifqi Alisba
                 </p>
             </div>
@@ -41,7 +41,7 @@ export default function NavbarComponent() {
                                         isActive
                                             ? 'text-violet-500 hover:text-violet-500/80'
                                             : 'text-black hover:text-slate-700 dark:text-white dark:hover:text-slate-300'
-                                    } p-4 font-bold w-full block border-b dark:border-slate-800 lg:border-none`
+                                    } py-2 px-4 md:p-4 font-bold w-full block border-b dark:border-slate-800 lg:border-none`
                                 }
                             >
                                 HOME
@@ -55,7 +55,7 @@ export default function NavbarComponent() {
                                         isActive
                                             ? 'text-violet-500 hover:text-violet-500/80'
                                             : 'text-black hover:text-slate-700 dark:text-white dark:hover:text-slate-300'
-                                    } p-4 font-bold w-full block border-b dark:border-slate-800 lg:border-none`
+                                    } py-2 px-4 md:p-4 font-bold w-full block border-b dark:border-slate-800 lg:border-none`
                                 }
                             >
                                 PROJECTS
@@ -65,12 +65,12 @@ export default function NavbarComponent() {
                 </nav>
 
                 <div
-                    className='w-[27px] h-[27px] lg:hidden cursor-pointer'
+                    className='h-5 w-5 md:w-[27px] md:h-[27px] lg:hidden cursor-pointer'
                     onClick={handleHamburger}
                 >
                     <RxHamburgerMenu className='w-full h-full dark:text-white' />
                 </div>
-                <div className='w-[27px] h-[27px]'>
+                <div className='h-5 w-5 md:w-[27px] md:h-[27px]'>
                     <button className='w-full h-full' onClick={setDarkMode}>
                         {darkMode ? (
                             <FaRegSun className='w-full h-full hover:text-slate-600 dark:text-white dark:hover:text-slate-300' />

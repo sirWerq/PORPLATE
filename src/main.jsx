@@ -5,7 +5,7 @@ import App from './App.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router';
 import ProjectPage from './pages/ProjectsPage.jsx';
 import Layout from './components/Layout.jsx';
-import DetailsProjectPage from './pages/detailsProjectPage.jsx';
+import DetailsProjectPage from './pages/DetailsProjectPage.jsx';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>

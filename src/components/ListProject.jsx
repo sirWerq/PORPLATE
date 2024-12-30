@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import Card from './Card';
 import { useState, useEffect } from 'react';
 
-export default function ProjectComponent() {
+export default function ProjectListComponent() {
     const api = '../../../data.json';
 
     const [datas, setDatas] = useState();
@@ -46,33 +46,22 @@ export default function ProjectComponent() {
                 transition={{ duration: 0.5 }}
             >
                 <p className='lg:text-2xl text-center'>
-                    Here you will find some of the personal and clients projects
+                    Here you will find all of the personal and clients projects
                     that I created with each project containing its own case
                     study
                 </p>
             </motion.div>
             <div className='w-[75%] mt-9 space-y-8 overflow-hidden'>
                 {datas &&
-                    datas.data
-                        .slice(0, 3)
-                        .map((data) => (
-                            <Card
-                                key={data.id}
-                                image={data.image}
-                                title={data.title}
-                                description={data.description}
-                                link={`/projects/${data.id}`}
-                            />
-                        ))}
-
-                <div className='text-center p-4'>
-                    <a
-                        href='/projects'
-                        className='text-violet-500 hover:text-violet-500/80'
-                    >
-                        See More!
-                    </a>
-                </div>
+                    datas.data.map((data) => (
+                        <Card
+                            key={data.id}
+                            image={data.image}
+                            title={data.title}
+                            description={data.description}
+                            link={`/projects/${data.id}`}
+                        />
+                    ))}
             </div>
         </>
     );

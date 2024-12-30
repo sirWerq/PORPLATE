@@ -6,7 +6,7 @@ import { FaCopyright } from 'react-icons/fa';
 
 export default function FooterComponent() {
     return (
-        <div className='h-[363px] bg-black flex items-center justify-center text-white'>
+        <div className='h-[363px] bg-white flex dark:bg-black items-center justify-center dark:text-white'>
             <div className='w-full lg:w-[60%] flex flex-col'>
                 <div className='flex justify-between lg:justify-normal lg:gap-60 border-b pb-9 px-5'>
                     <div className='flex flex-col gap-3'>
