@@ -16,19 +16,17 @@ export default function CarouselComponent() {
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
-            className='w-full lg:h-[500px]'
+            className='w-full h-[500px]'
         >
             <SwiperSlide>
                 <img
                     src={img_1}
                     alt='Slide 1'
-                    className='object-cover rounded-lg'
+                    className='object-cover rounded-lg w-full h-full'
                 />
             </SwiperSlide>
             <SwiperSlide>
                 <iframe
-                    width='560'
-                    height='315'
                     src='https://www.youtube.com/embed/kFX4SditN_g?si=7N-KdsbRheYUNB1r'
                     title='YouTube video player'
                     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
