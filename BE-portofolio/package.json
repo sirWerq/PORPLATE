@@ -1,0 +1,20 @@
+{
+  "name": "backend-portofolio",
+  "version": "0.1.1",
+  "description": "An Backend for our simple portofolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "keywords": [
+    "PORTO",
+    "Backend"
+  ],
+  "author": "Thoriq",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.2"
+  }
+}
