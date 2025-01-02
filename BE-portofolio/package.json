@@ -2,9 +2,9 @@
   "name": "backend-portofolio",
   "version": "0.1.1",
   "description": "An Backend for our simple portofolio",
-  "main": "index.js",
+  "main": "./src/app.js",
   "scripts": {
-    "test": "npm run dev"
+    "test": "node ./src/app.js"
   },
   "keywords": [
     "PORTO",
@@ -14,7 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "minio": "^8.0.3",
     "mongoose": "^8.9.2"
   }
 }

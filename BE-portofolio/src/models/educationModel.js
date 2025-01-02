@@ -8,7 +8,7 @@ const educationSchema = mongoose.Schema({
         index: true
     },
     school: String,
-    startDate: date,
+    startDate: Date,
     endDate: mongoose.Schema.Types.Mixed,
     overview: String,
     dotPoint: [String]

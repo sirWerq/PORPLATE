@@ -7,6 +7,12 @@ const Register = async (req, res) => {
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);
 
+    if (!isValidUsername(username)) {
+        return res.status(400).json({
+            error: "Invalid username. Username must start with a letter, can only contain letters, numbers, underscores, and dashes, and must not contain spaces.",
+        });
+    }
+
     try {
         const dataExist = await Users.findOne({
             $or: [{ username: username }, { email: email }]
