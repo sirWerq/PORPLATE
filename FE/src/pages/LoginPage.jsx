@@ -30,6 +30,7 @@ export default function LoginPage() {
         setIsSubmit(true);
 
         const result = loginSchema.safeParse(formData);
+
         if (!result.success) {
             const fieldErrors = result.error.errors.reduce((acc, err) => {
                 acc[err.path[0]] = err.message;
@@ -46,11 +47,14 @@ export default function LoginPage() {
 
     return (
         <div className='w-full h-screen flex flex-col items-center justify-center dark:bg-[#121212] dark:text-white'>
-            <div className='w-[70%] flex flex-col justify-center items-center'>
+            <div className='w-[90%] lg:w-[70%] flex flex-col justify-center items-center'>
                 <h2 className='font-bold text-xl lg:text-2xl tracking-wider dark:text-white'>
                     LOGIN
                 </h2>
-                <form onSubmit={handleLoginForm} className='w-[60%] space-y-3'>
+                <form
+                    onSubmit={handleLoginForm}
+                    className='w-[80%] lg:w-[60%] space-y-1'
+                >
                     <div className='flex flex-col gap-1'>
                         <label htmlFor='username'>Username</label>
                         <input
@@ -88,7 +92,7 @@ export default function LoginPage() {
                         </div>
                     </div>
                     <div className='flex flex-col gap-1'>
-                        <label htmlFor=''>Password</label>
+                        <label htmlFor='password'>Password</label>
                         <div className='relative'>
                             <input
                                 type={showPassword ? 'text' : 'password'}
