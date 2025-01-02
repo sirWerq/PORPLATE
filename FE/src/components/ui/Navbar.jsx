@@ -1,10 +1,10 @@
-import profileImage from '../assets/profile.jpg';
+import profileImage from '../../assets/profile.jpg';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { GoMoon } from 'react-icons/go';
 import { FaRegSun } from 'react-icons/fa6';
 import { useState } from 'react';
 import { NavLink } from 'react-router';
-import useStore from '../store/store';
+import useStore from '../../store/store';
 
 export default function NavbarComponent() {
     const [hamburgerMenu, setHamburgerMenu] = useState(false);

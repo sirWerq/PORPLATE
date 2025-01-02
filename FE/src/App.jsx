@@ -1,6 +1,6 @@
-import AboutComponent from './components/About';
-import ContactComponent from './components/Contact';
-import IntroductionComponent from './components/Introduction';
+import AboutComponent from './components/ui/About';
+import ContactComponent from './components/ui/Contact';
+import IntroductionComponent from './components/ui/Introduction';
 import ProjectComponent from './components/Projects';
 
 function App() {

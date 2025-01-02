@@ -8,7 +8,7 @@ export default function FooterComponent() {
     return (
         <div className='h-[363px] bg-white flex dark:bg-black items-center justify-center dark:text-white'>
             <div className='w-full lg:w-[60%] flex flex-col'>
-                <div className='flex justify-between lg:justify-normal lg:gap-60 border-b pb-9 px-5'>
+                <div className='flex justify-between border-b pb-9 px-5'>
                     <div className='flex flex-col gap-3'>
                         <h5 className='font-semibold text-xl tracking-wider'>
                             SAY HELLO

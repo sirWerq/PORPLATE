@@ -1,6 +1,10 @@
 import { motion } from 'motion/react';
+import ButtonForm from '../ButtonForm';
+import { useState } from 'react';
 
 export default function ContactComponent() {
+    const [isSubmit, setIsSubmit] = useState(false);
+
     return (
         <>
             <motion.div
@@ -71,11 +75,11 @@ export default function ContactComponent() {
                             autoComplete='off'
                         />
                     </div>
-                    <div className='flex flex-col items-center w-full space-y-1'>
-                        <button className='bg-violet-500 p-4 font-semibold text-white rounded-lg'>
-                            SUBMIT
-                        </button>
-                    </div>
+                    <ButtonForm
+                        text={'Submitting'}
+                        textDisable={'Submmit'}
+                        isSubmit={isSubmit}
+                    />
                 </form>
             </motion.div>
         </>
