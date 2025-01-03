@@ -1,13 +1,14 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { Users } = require("../models/userModel");
+const { isValidUsername } = require("../utils/usernameUtil")
 
 const Register = async (req, res) => {
     const { name, username, password, email } = req.body;
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);
 
-    if (!isValidUsername(username)) {
+    if (!username & isValidUsername(username)) {
         return res.status(400).json({
             error: "Invalid username. Username must start with a letter, can only contain letters, numbers, underscores, and dashes, and must not contain spaces.",
         });
