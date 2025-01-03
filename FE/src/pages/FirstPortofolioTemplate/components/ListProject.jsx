@@ -1,9 +1,9 @@
 import { motion } from 'motion/react';
-import Card from './Card';
+import Card from '/src/components/Card';
 import { useState, useEffect } from 'react';
 
 export default function ProjectListComponent() {
-    const api = '../../../data.json';
+    const api = '/data.json';
 
     const [datas, setDatas] = useState();
 
@@ -59,7 +59,7 @@ export default function ProjectListComponent() {
                             image={data.image}
                             title={data.title}
                             description={data.description}
-                            link={`/projects/${data.id}`}
+                            link={`/subdomain/projects/${data.id}`}
                         />
                     ))}
             </div>

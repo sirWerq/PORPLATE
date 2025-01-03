@@ -2,6 +2,7 @@ import Button from '../components/ButtonForm';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from 'react';
 import { loginSchema } from '../lib/zod';
+import { loginFormAuth } from '../services/userAuth';
 
 export default function LoginPage() {
     const [showPassword, setShowPassword] = useState(false);
@@ -41,7 +42,7 @@ export default function LoginPage() {
         } else {
             setErrors({});
             setIsSubmit(false);
-            console.log('Form Data:', formData);
+            loginFormAuth(formData);
         }
     };
 

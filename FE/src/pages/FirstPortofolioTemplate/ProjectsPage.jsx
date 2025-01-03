@@ -1,4 +1,4 @@
-import ProjectListComponent from '../components/listProject';
+import ProjectListComponent from './components/listProject';
 
 export default function ProjectPage() {
     return (

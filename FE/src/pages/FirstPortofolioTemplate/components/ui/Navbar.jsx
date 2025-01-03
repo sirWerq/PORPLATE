@@ -1,10 +1,10 @@
-import profileImage from '../../assets/profile.jpg';
+import profileImage from '/src/assets/profile.jpg';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { GoMoon } from 'react-icons/go';
 import { FaRegSun } from 'react-icons/fa6';
 import { useState } from 'react';
 import { NavLink } from 'react-router';
-import useStore from '../../store/store';
+import useStore from '/src/store/store';
 
 export default function NavbarComponent() {
     const [hamburgerMenu, setHamburgerMenu] = useState(false);
@@ -35,7 +35,7 @@ export default function NavbarComponent() {
                     <ul className='flex lg:gap-5 flex-col lg:flex-row'>
                         <li>
                             <NavLink
-                                to='/'
+                                to='/subdomain'
                                 className={({ isActive }) =>
                                     `${
                                         isActive
@@ -43,13 +43,14 @@ export default function NavbarComponent() {
                                             : 'text-black hover:text-slate-700 dark:text-white dark:hover:text-slate-300'
                                     } py-2 px-4 md:p-4 font-bold w-full block border-b dark:border-slate-800 lg:border-none`
                                 }
+                                end
                             >
                                 HOME
                             </NavLink>
                         </li>
                         <li>
                             <NavLink
-                                to='/projects'
+                                to='/subdomain/projects'
                                 className={({ isActive }) =>
                                     `${
                                         isActive
@@ -63,7 +64,6 @@ export default function NavbarComponent() {
                         </li>
                     </ul>
                 </nav>
-
                 <div
                     className='h-5 w-5 md:w-[27px] md:h-[27px] lg:hidden cursor-pointer'
                     onClick={handleHamburger}

@@ -2,6 +2,7 @@ import Button from '../components/ButtonForm';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from 'react';
 import { registerSchema } from '../lib/zod';
+import { registerFormAuth } from '../services/userAuth';
 
 export default function RegisterPage() {
     const [showPassword, setShowPassword] = useState(false);
@@ -32,7 +33,7 @@ export default function RegisterPage() {
         }));
     };
 
-    const handleRegisterForm = (e) => {
+    const handleRegisterForm = async (e) => {
         e.preventDefault();
         setIsSubmit(true);
 
@@ -48,7 +49,8 @@ export default function RegisterPage() {
         } else {
             setErrors({});
             setIsSubmit(false);
-            console.log('Form Data:', formData);
+            const res = await registerFormAuth(formData);
+            console.log(res);
         }
     };
 

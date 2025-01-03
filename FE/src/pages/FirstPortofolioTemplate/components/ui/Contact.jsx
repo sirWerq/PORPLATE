@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { motion } from 'motion/react';
-import ButtonForm from '../ButtonForm';
+import ButtonForm from '/src/components/ButtonForm';
 import { useState } from 'react';
 
 export default function ContactComponent() {

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import CarouselComponent from '../components/Carousel';
+import CarouselComponent from '/src/components/Carousel';
 import { NavLink } from 'react-router-dom';
 
 export default function DetailsProjectPage() {
