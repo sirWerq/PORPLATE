@@ -73,12 +73,10 @@ const Login = async (req, res) => {
             expiresIn: '1m'
         });
 
-        // KURANG SET COOKIES
-        return res.status(201).json({
-            error: false,
-            message: "Login successfull"
-            // return accesToken
-        })
+        return res.writeHead(200, {
+            "Set-Cookie": `jwt=${accessToken}; HttpOnly`,
+            "Access-Allow-Credentials": "true"
+        }).send();
     } catch (error) {
         return res.status(500).json({
             error: true,
@@ -88,13 +86,13 @@ const Login = async (req, res) => {
 };
 
 const CheckAuth = async (req, res) => {
-    const { user } = await Users.findById(req.user.userId);
+    const { user } = await Users.findById(req.userId);
 
     return res.status(200).json({
         error: false,
         message: 'Auth success',
         data: {
-            userId: req.user.userId,
+            userId: req.userId,
             username: user.username,
             email: user.email,
             name: user.name,

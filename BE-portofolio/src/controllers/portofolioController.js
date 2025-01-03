@@ -31,8 +31,8 @@ const loadPortofolio = async (req, res) => {
         return res.status(200).json({
             error: false,
             user: user,
-            projects: projects,
             userDetail: userDetail,
+            projects: projects,
             educations: educations,
             userSkills: userSkills
         })
