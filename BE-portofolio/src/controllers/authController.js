@@ -7,14 +7,13 @@ const Register = async (req, res) => {
     const { name, username, password, email } = req.body;
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);
-
-    if (!username & isValidUsername(username)) {
-        return res.status(400).json({
-            error: "Invalid username. Username must start with a letter, can only contain letters, numbers, underscores, and dashes, and must not contain spaces.",
-        });
-    }
-
     try {
+        if (!username & !isValidUsername(username)) {
+            return res.status(400).json({
+                error: "Invalid username. Username must start with a letter, can only contain letters, numbers, underscores, and dashes, and must not contain spaces.",
+            });
+        }
+
         const dataExist = await Users.findOne({
             $or: [{ username: username }, { email: email }]
         });
@@ -71,7 +70,7 @@ const Login = async (req, res) => {
 
         const { _id, username, email } = getUserData;
         const accessToken = jwt.sign({ userId: _id }, process.env.ACCESS_SECRET_TOKEN, {
-            expiresIn: '1m'
+            expiresIn: '8h'
         });
 
         return res.writeHead(200, {
